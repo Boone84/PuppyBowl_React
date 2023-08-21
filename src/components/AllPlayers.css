@@ -1,17 +1,19 @@
 /* vite-project/src/components/AllPlayers.css */
-h1{
+h1 {
     text-align: center;
 }
+
 .player-list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* align-items: flex-start; */
-  }
-  
-  .player-item {
+}
+
+.player-item {
+    background-color: aliceblue;
+    border-radius: 10px;
     width: 400px;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,24 +21,27 @@ h1{
     margin: 15px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .player-image {
-    margin-top: 30px;
+}
+
+.player-image {
+    margin-top: 20px;
     max-width: 40%;
     max-height: 40%;
     object-fit: contain;
-  }
-  
-  .player-name {
-    font-size: 20px;
+}
+
+.player-name {
+    font-size: 30px;
     font-weight: bold;
+    margin-top: 5px;
+}
+
+.player-details {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
-  }
-  
-  .player-details {
-    margin: auto;
-    color: blue;
+    padding: 7px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    }
-  
+    background-color: rgb(51, 255, 51);   
+}

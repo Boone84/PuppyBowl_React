@@ -1,3 +1,4 @@
+// vite-project/src/components/AllPlayers.jsx
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { fetchPlayers } from "../API/index.js";

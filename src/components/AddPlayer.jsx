@@ -1,15 +1,17 @@
+// vite-project/src/components/AddPlayer.jsx
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
-import './AddPlayer.css'
+import React, { useState } from "react";
+import "./AddPlayer.css";
+import { addPlayer } from "../API/index.js";
 
 const AddPlayer = () => {
   const [playerData, setPlayerData] = useState({
-    name: '',
-    breed: '',
-    imageUrl: '',
-    status: '',
+    name: "",
+    breed: "",
+    imageUrl: "",
+    status: "",
   });
-  const [alertMessage, setAlertMessage] = useState('');
+  const [alertMessage, setAlertMessage] = useState("");
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -20,29 +22,20 @@ const AddPlayer = () => {
     event.preventDefault();
 
     try {
-      // Here, add the code to submit the data to your API.
-      // For example, using the fetch API to send a POST request.
-      const response = await fetch('your_api_url_here', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(playerData),
-      });
+      const response = await addPlayer(playerData);
 
-      if (response.ok) {
-        console.log('Player added successfully!');
-        setAlertMessage('Player added successfully!');
+      if (response && response.success) {
+        console.log("Player added successfully!");
+        setAlertMessage("Player added successfully!");
       } else {
-        console.error('Failed to add player:', await response.json());
-        setAlertMessage('Failed to add player. Please try again.');
+        console.error("Failed to add player:", response);
+        setAlertMessage("Failed to add player. Please try again.");
       }
     } catch (error) {
-      console.error('Error adding player:', error);
-      setAlertMessage('Error adding player. Please try again.');
+      console.error("Error adding player:", error);
+      setAlertMessage("Error adding player. Please try again.");
     }
   };
-
   return (
     <div className="form-container">
       <h2>Add New Player</h2>
@@ -92,7 +85,9 @@ const AddPlayer = () => {
             required
           />
         </div>
-        <button className="form-button" type="submit">Add Player</button>
+        <button className="form-button" type="submit">
+          Add Player
+        </button>
       </form>
     </div>
   );

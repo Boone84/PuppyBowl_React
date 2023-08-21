@@ -1,32 +1,38 @@
 /* SinglePlayer.css */
 
 .single-player-container {
+    margin-top: 50px;
+    border-radius: 7px;
+    background-color: aliceblue;
+    max-width: 400px;
+    max-height: 850px;
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    font-size: 24px;
+}
+
+#player-name {
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  .player-image {
+}
+
+.player-image {
     max-width: 100%;
     max-height: 300px;
     object-fit: contain;
     margin-bottom: 20px;
-  }
-  
-  .player-details {
-    font-size: 16px;
+}
+
+.playerdetails {
+
+    font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .delete-button {
+}
+
+.delete-button {
     color: #fff;
     background-color: #f44336;
     border: none;
@@ -35,9 +41,8 @@
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
-  }
-  
-  .delete-button:hover {
+}
+
+.delete-button:hover {
     background-color: #d32f2f;
-  }
-  
+}

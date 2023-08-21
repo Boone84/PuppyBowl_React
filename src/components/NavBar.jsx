@@ -1,7 +1,8 @@
+// vite-project/src/components/NavBar.jsx
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
   return (
